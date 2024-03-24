@@ -9,7 +9,8 @@ defmodule TodoApiWeb.Router do
     pipe_through(:api)
 
     post "/tasks", TasksCreate, :create
-    # post("/tasks", TasksController, :create)
+    get "/tasks", TasksShow, :index
+    # get "/tasks/:id", TasksShow, :show
   end
 
   # Enable LiveDashboard in development

@@ -4,6 +4,8 @@ defmodule TodoApi.Tasks.Task do
 
   @required_fields [:title, :completed]
 
+  # Diretiva para o Jason saber como parsear o schema
+  @derive {Jason.Encoder, only: [:id, :title, :description, :completed, :priority]}
   schema "tasks" do
     field(:title, :string)
     field(:description, :string)
