@@ -10,7 +10,9 @@ defmodule TodoApiWeb.Router do
 
     post "/tasks", TasksCreate, :create
     get "/tasks", TasksShow, :index
-    # get "/tasks/:id", TasksShow, :show
+    get "/tasks/:id", TasksShow, :get_one
+    delete "/tasks/:id", TasksDelete, :delete
+    put "/tasks/:id", TasksUpdate, :update
   end
 
   # Enable LiveDashboard in development

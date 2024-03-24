@@ -5,4 +5,8 @@ defmodule TodoApi.Tasks.Show do
   def call() do
     Repo.all(Task)
   end
+
+  def get_one(id) do
+    Repo.get(Task, id)
+  end
 end
